@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 // deai 技能安装器：把 SKILL.md / example.md 复制进 DSH 技能目录（零依赖）
 // 用法：
-//   npx dsh-skill-deai             安装到全局（~/.dsh/skills/deai）
-//   npx dsh-skill-deai --project   安装到当前项目（./.dsh/skills/deai）
+//   npx deai-skill-cn             安装到全局（~/.dsh/skills/deai）
+//   npx deai-skill-cn --project   安装到当前项目（./.dsh/skills/deai）
 const fs = require("node:fs");
 const os = require("node:os");
 const path = require("node:path");

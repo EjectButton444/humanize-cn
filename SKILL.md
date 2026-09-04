@@ -3,6 +3,7 @@ name: deai
 description: 当用户要求生成更自然、更像真人书写的中文内容，或要求润色、改写带 AI 痕迹的文本时使用。核心能力：去 AI 高频词与套话、破总分总与机械罗列、注入主观性、按使用场景调整审查力度。
 whenToUse: 用户要求"润色/改写/去AI味/写得像人写的/自然一点/口语一点"，或要求生成社交动态、公众号、工作文档等希望读起来像真人书写的文本时使用。
 user-invocable: true
+license: MIT
 metadata:
   author:  EjectButton444
   version: 1.1.0

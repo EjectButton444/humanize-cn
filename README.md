@@ -1,6 +1,6 @@
 # deai —— AI文字特征去除器
 
-一个 [DeepSeek Harness（DSH）](https://github.com/deepseek-ai) 技能：把带 AI 痕迹的中文文本改写成自然、像真人写的内容。
+一个遵循 [Agent Skills](https://github.com/agentskills/agentskills) 规范的技能（SKILL.md 格式）：把带 AI 痕迹的中文文本改写成自然、像真人写的内容。兼容 DeepSeek Harness（DSH）、Claude Code、OpenAI Agent 等支持 Agent Skills 的工具。
 
 ## 它能做什么
 
@@ -12,24 +12,27 @@
 
 ## 安装
 
-### 方式一：npx（推荐）
+### 方式一：npx（安装到 DeepSeek Harness）
 
 ```bash
-npx dsh-skill-deai             # 安装到全局（~/.dsh/skills/deai，所有会话可用）
-npx dsh-skill-deai --project   # 安装到当前项目（./.dsh/skills/deai，仅该项目）
+npx deai-skill-cn             # 安装到全局（~/.dsh/skills/deai）
+npx deai-skill-cn --project   # 安装到当前项目（./.dsh/skills/deai）
 ```
 
-### 方式二：手动安装
+### 方式二：手动安装（任意支持 Agent Skills 的工具）
 
-把本仓库的 `SKILL.md` 和 `example.md` 复制到：
+把 `SKILL.md` 和 `example.md` 复制到对应工具的技能目录：
 
-- 全局：`~/.dsh/skills/deai/`（Windows 为 `%USERPROFILE%\.dsh\skills\deai\`）
-- 项目：`<项目根目录>/.dsh/skills/deai/`
+| 工具 | 全局目录 | 项目目录 |
+|---|---|---|
+| DeepSeek Harness | `~/.dsh/skills/deai/` | `<项目>/.dsh/skills/deai/` |
+| Claude Code | `~/.claude/skills/deai/` | `<项目>/.claude/skills/deai/` |
+| OpenAI Agent / Codex | `~/.agents/skills/deai/` | `<项目>/.agents/skills/deai/` |
 
 ## 使用
 
-- **自动触发**：任务匹配（"润色 / 改写 / 去AI味 / 写得像人写的 / 自然一点"等）时，DSH 会自动调用本技能；
-- **手动调用**：`/deai`，或直接说"用 deai 技能润色这段文字"。
+- **自动触发**：技能的 `description` 已写明触发条件（"润色 / 改写 / 去AI味 / 写得像人写的 / 自然一点"等），支持 Agent Skills 的工具会在任务匹配时自动调用；
+- **手动调用**：DSH 中 `/deai`，或直接说"用 deai 技能润色这段文字"；其他工具按各自的技能调用方式。
 
 ## 效果示例
 
