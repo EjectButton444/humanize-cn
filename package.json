@@ -4,7 +4,7 @@
   "description": "Agent Skills 规范技能（中文专用）：AI文字特征去除器（deai），把带 AI 痕迹的中文文本改写成自然、像真人写的内容。",
   "license": "MIT",
   "bin": {
-    "deai-skill-cn": "./install.js"
+    "deai-skill-cn": "install.js"
   },
   "files": [
     "SKILL.md",
@@ -28,5 +28,8 @@
     "dsh",
     "claude"
   ],
-  "author": "EjectButton444"
+  "author": "EjectButton444",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
 }

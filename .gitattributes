@@ -1,0 +1,2 @@
+# 保持 bin 脚本为 LF：避免 npm 校验 shebang 时因 CRLF 报 bin 无效
+install.js text eol=lf
