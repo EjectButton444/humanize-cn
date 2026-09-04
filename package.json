@@ -11,7 +11,8 @@
     "example.md",
     "install.js",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "docs/deai-concept.jpg"
   ],
   "engines": {
     "node": ">=18"
